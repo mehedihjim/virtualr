@@ -11,7 +11,7 @@ const Features = () => {
     }, []);
 
     return (
-        <div className='relative mt-20 border-b border-neutral-700 min-h-[800px]'>
+        <div id='features' className='relative mt-20 border-b border-neutral-700 min-h-[800px]'>
             <div data-aos="zoom-in" className="text-center">
                 <span className='bg-neutral-700 text-orange-500 rounded-full h-6 text-sm font-medium px-2 py-1 uppercase'>Features</span>
                 <h2 className='text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20'>Easily build <span className='bg-gradient-to-r from-orange-500 to-orange-800 bg-clip-text text-transparent'>your code</span></h2>
