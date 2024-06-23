@@ -1,14 +1,24 @@
 import { CheckCircle2 } from "lucide-react"
 import { features, pricingOptions } from './../../constants/index';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 const Pricing = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+        });
+    }, []);
     return (
         <div className="mt-20">
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-8 tracking-wide">Pricing</h2>
+            <h2 data-aos="zoom-out" className="text-3xl sm:text-5xl lg:text-6xl text-center my-8 tracking-wide">Pricing</h2>
             <div className="flex flex-wrap">
                 {pricingOptions.map((option, index) => (
-                    <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
+                    <div data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000" key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
                         <div className="p-10 border border-neutral-700 rounded-xl">
                             <p className="text-4xl mb-8">
                                 {option.title}
